@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Source } from './shared/model/source.model.ts';
 
 @Component({
   selector: 'app-sources',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sources.component.css']
 })
 export class SourcesComponent implements OnInit {
-
+  sources: Array<Source>
   constructor() { }
 
   ngOnInit() {

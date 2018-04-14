@@ -10,6 +10,7 @@ import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 
 import { SessionService } from './shared/services/session.service';
 import { UsersService } from './shared/services/users.service';
+import { SourcesService } from './shared/services/sources.service';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -19,6 +20,8 @@ import { FooterComponent } from './components/misc/footer/footer.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { SignupComponent } from './components/misc/signup/signup.component';
 import { SourcesComponent } from './components/sources/sources.component';
+import { SourcesListComponent } from './components/sources-list/sources-list.component';
+import { SourceItemComponent } from './components/source-item/source-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { SourcesComponent } from './components/sources/sources.component';
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    SourcesComponent
+    SourcesComponent,
+    SourcesListComponent,
+    SourceItemComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ import { SourcesComponent } from './components/sources/sources.component';
   providers: [
     SessionService,
     IsAuthenticatedGuard,
-    UsersService
+    UsersService,
+    SourcesService
   ],
   bootstrap: [AppComponent]
 })
