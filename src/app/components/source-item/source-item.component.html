@@ -1,5 +1,3 @@
-<div>{{source.name}}</div>
-
 <div *ngIf="source">
   <div class="source-thumbnail">
     <img height="300" [src]="source.image" />
@@ -7,9 +5,63 @@
 
   <div class="source-info">
     <h2> {{ source.name }}</h2>
-    <h3> {{ source.image }} </h3>
+    <h3> {{ source.sourcetype }} </h3>
 
-  
     <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+    <form (ngSubmit)="onSubmitSource(sourceForm)" #sourceForm="ngForm">
+      <div class="form-group" [class.has-error]="image.errors && image.touched">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-fire"></i>
+          </span>
+          <input type="text" name="image" class="form-control" placeholder="Image" [(ngModel)]="source.image" #image="ngModel" required>
+        </div>
+        <label class="control-label" *ngIf="image.errors && image.touched">
+          <ul>
+            <li *ngIf="image.errors.required">Required</li>
+          </ul>
+        </label>
+      </div>
+
+      <div class="form-group" [class.has-error]="name.errors && name.touched">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-tag"></i>
+          </span>
+          <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="source.name" #name="ngModel" required>
+        </div>
+        <label class="control-label" *ngIf="name.errors && name.touched">
+          <ul>
+            <li *ngIf="name.errors.required">Required</li>
+          </ul>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-picture"></i>
+          </span>
+          <input type="file" name="name" class="form-control" #imageFile>
+        </div>
+      </div>
+
+      <div class="form-group" class="has-error" *ngIf="apiError">
+        <label class="control-label">
+          {{ apiError }}
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-block btn-primary"
+        [disabled]="!sourceForm.valid">Add Source</button>
+      </div>
+    </form>
   </div>
 </div>

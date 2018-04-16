@@ -1,5 +1,3 @@
-
-
 import { SourcesService } from './../../shared/services/sources.service';
 import { Source } from './../../shared/model/source.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -21,10 +19,7 @@ export class SourceCreateComponent {
     private router: Router,
     private sourcesService: SourcesService) {}
 
-
-
-
-  onSubmitSource(sourceForm: NgForm) {
+ onSubmitSource(sourceForm: NgForm) {
     const imageFile = this.imageFile.nativeElement;
     if (imageFile.files && imageFile.files[0]) {
       this.source.image = imageFile.files[0];
