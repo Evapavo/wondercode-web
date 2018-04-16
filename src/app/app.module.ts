@@ -4,9 +4,12 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+
 import './rxjs.operators';
 
 import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
+import { CanLeaveSourceCreateGuard } from './shared/guards/can-leave-source-create.guard';
+import { SourceDetailsResolverGuard } from './shared/resolvers/source.details.resolver.guard';
 
 import { SessionService } from './shared/services/session.service';
 import { UsersService } from './shared/services/users.service';
@@ -20,8 +23,9 @@ import { FooterComponent } from './components/misc/footer/footer.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { SignupComponent } from './components/misc/signup/signup.component';
 import { SourcesComponent } from './components/sources/sources.component';
-import { SourcesListComponent } from './components/sources-list/sources-list.component';
 import { SourceItemComponent } from './components/source-item/source-item.component';
+import { SourceCreateComponent } from './components/source-create/source-create.component';
+import { SourceBaseComponent } from './components/source-base/source-base.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +36,9 @@ import { SourceItemComponent } from './components/source-item/source-item.compon
     LoginComponent,
     SignupComponent,
     SourcesComponent,
-    SourcesListComponent,
-    SourceItemComponent
+    SourceItemComponent,
+    SourceCreateComponent,
+    SourceBaseComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,10 @@ import { SourceItemComponent } from './components/source-item/source-item.compon
     SessionService,
     IsAuthenticatedGuard,
     UsersService,
-    SourcesService
+    SourcesService,
+    CanLeaveSourceCreateGuard,
+    SourceDetailsResolverGuard,
+
   ],
   bootstrap: [AppComponent]
 })

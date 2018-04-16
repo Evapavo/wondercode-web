@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Source } from '../../shared/model/source.model';
 import { SourcesService } from '../../shared/services/sources.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sources',
@@ -12,7 +12,11 @@ export class SourcesComponent implements OnInit {
   sources: Array<Source> = [];
   type: string;
 
-  constructor(private sourcesService: SourcesService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private sourcesService: SourcesService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+   ) { }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
@@ -25,5 +29,9 @@ export class SourcesComponent implements OnInit {
       .subscribe((sources) => {
         this.sources = sources.filter(source => source.sourceType === this.type);
       });
+  }
+
+  getSourceInfo(id) {
+    this.router.navigate(['/info'], { queryParams: { id } });
   }
 }

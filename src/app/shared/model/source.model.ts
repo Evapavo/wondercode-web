@@ -11,7 +11,6 @@ export class Source {
         data.append('url', this.url);
         data.append('name', this.name);
         data.append('sourceType', this.sourceType);
-
         data.append('image', this.image);
 
         return data;

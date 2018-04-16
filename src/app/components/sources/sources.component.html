@@ -1,1 +1,13 @@
-<app-source-item *ngFor="let source of sources" [source]="source"></app-source-item>
+<!-- <app-source-item *ngFor="let source of sources" [source]="source"></app-source-item> -->
+
+<a [routerLink]="['/sources/new']">
+  <i class="fa fa-plus"></i>
+</a>
+<div class="row">
+  <div *ngFor="let source of sources" class="source col-xs-12 col-sm-3">
+    <img [src]="source.image" />
+    <h3> {{ source.name }} </h3>
+    <p> {{ source.sourceType }} </p>
+    <button (click)="getSourceInfo(source.id)"> Read more </button>
+  </div>
+</div>

@@ -1,1 +1,15 @@
 <div>{{source.name}}</div>
+
+<div *ngIf="source">
+  <div class="source-thumbnail">
+    <img height="300" [src]="source.image" />
+  </div>
+
+  <div class="source-info">
+    <h2> {{ source.name }}</h2>
+    <h3> {{ source.image }} </h3>
+
+  
+    <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
+  </div>
+</div>
