@@ -1,0 +1,17 @@
+body {
+  font-family: "Open sans", "Opensans",sans-serif;
+  font-weight: lighter;
+  font-size: 100px;
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+font-size: 50px;
+padding-top: 200px;
+padding-bottom: 200px;
+
+}
+
+ul {
+list-style: none;
+}

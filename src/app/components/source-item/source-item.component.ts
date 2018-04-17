@@ -1,5 +1,5 @@
 import { SourcesService } from './../../shared/services/sources.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Source } from '../../shared/model/source.model';
 import { ActivatedRoute,Params, Router } from '@angular/router';
 
@@ -12,6 +12,9 @@ export class SourceItemComponent implements OnInit {
   source: Source = new Source();
   error: Object;
   id: string;
+  apiError: string;
+  @ViewChild('imageFile') imageFile;
+  @ViewChild('sourceForm') sourceForm;
 
   constructor(
     private router: Router,
@@ -31,7 +34,22 @@ export class SourceItemComponent implements OnInit {
       }
     });
   }
-
+  onSubmitSource(sourceForm) {
+     const imageFile = this.imageFile.nativeElement;
+     if (imageFile.files && imageFile.files[0]) {
+       this.source.image = imageFile.files[0];
+       this.sourcesService.create(this.source)
+         .subscribe(
+           (source) => {
+             sourceForm.reset();
+             this.router.navigate(['/sources']);
+           },
+           (error) => {
+             this.apiError = error;
+           }
+       );
+     }
+   }
   onClickDelete() {
     if (window.confirm('Are you sure?')) {
       this.sourcesService.delete(this.source.id)
