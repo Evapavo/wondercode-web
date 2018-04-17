@@ -1,1 +1,32 @@
 
+
+.whatcan {
+  text-align: center;
+}
+
+.what-text h2{
+  margin-top: 70px;
+  color: rgb(83, 88, 98);
+}
+
+.whatcan p {
+  color: rgb(135, 145, 156);
+}
+
+.whatcan a {
+  text-decoration: none;
+  color:red;
+}
+
+.whatcan article {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 75px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 250px;
+  border: 3px;
+  text-align: center;
+}

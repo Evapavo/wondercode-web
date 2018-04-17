@@ -27,6 +27,7 @@ import { SourceItemComponent } from './components/source-item/source-item.compon
 import { SourceCreateComponent } from './components/source-create/source-create.component';
 import { SourceBaseComponent } from './components/source-base/source-base.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { SourceBaseComponent } from './components/source-base/source-base.compon
     SourcesComponent,
     SourceItemComponent,
     SourceCreateComponent,
-    SourceBaseComponent
+    SourceBaseComponent,
+
   ],
   imports: [
     BrowserModule,

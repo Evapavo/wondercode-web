@@ -23,7 +23,8 @@
           <span class="input-group-addon">
             <i class="fa fa-lock"></i>
           </span>
-          <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" #password="ngModel"
+          <input type="password" name="password" class="form-control"
+          placeholder="Password" [(ngModel)]="user.password" #password="ngModel"
             required>
         </div>
         <label class="control-label" *ngIf="password.errors && password.touched">
