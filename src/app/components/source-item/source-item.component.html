@@ -1,6 +1,6 @@
 <div *ngIf="source">
   <div class="source-thumbnail">
-    <img height="300" [src]="source.image" />
+    <img width ="300px" [src]="source.image" />
   </div>
 
   <div class="source-info">
@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+  <div class="col-xs-12 col-xs-5 col-sm-offset-0">
 
     <form (ngSubmit)="onSubmitSource(sourceForm)" #sourceForm="ngForm">
       <div class="form-group" [class.has-error]="image.errors && image.touched">
@@ -50,7 +50,7 @@
       </div>
 
       <div class="form-actions">
-        <button type="submit" class="btn btn-block btn-primary"
+        <button type="submit" class="btn btn-block btn-warning"
         [disabled]="!sourceForm.valid">Add Source</button>
       </div>
     </form>

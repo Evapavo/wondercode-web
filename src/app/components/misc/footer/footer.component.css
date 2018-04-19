@@ -3,7 +3,7 @@
 .title {
       text-align: center;
       font-size: 100px;
-      margin-top: 25px;
+      margin-top: 15px;
       color: #336699;
 }
 .title p {
@@ -47,6 +47,7 @@ list-style: none;
 
 text {
   color: orange;
+
 }
 
 
@@ -57,9 +58,6 @@ text {
   margin-bottom:10px;
 }
 
-span {
-  font-family: sans-serif;
-}
 
 h3{
   font-family: Orangejuice;
@@ -71,16 +69,21 @@ h3{
 
 .maintext-text h2{
   font-family: sans-serif;
-  margin-top: 50px;
+  margin-top: 25px;
   color: orange;
   font-weight: bold;
 }
 
+span {
+font-family: Orangejuice;
+font-size: 70px;
+font-weight: lighter;
+color: orange;
+}
 .maintext p {
   font-family: sans-serif;
   color: orange;
 
-  font-weight: bold;
 }
 
 

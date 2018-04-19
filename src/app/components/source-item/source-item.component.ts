@@ -34,13 +34,13 @@ export class SourceItemComponent implements OnInit {
       }
     });
   }
-  
+
   onSubmitSource(sourceForm) {
      this.sourcesService.create(this.source)
        .subscribe(
          (source) => {
            sourceForm.reset();
-           this.router.navigate(['/sources']);
+           this.router.navigate(['/home']);
          },
          (error) => {
            this.apiError = error;
@@ -52,7 +52,7 @@ export class SourceItemComponent implements OnInit {
     if (window.confirm('Are you sure?')) {
       this.sourcesService.delete(this.source.id)
         .subscribe(() => {
-          this.router.navigate(['/sources']);
+          this.router.navigate(['/home']);
         });
     }
   }
