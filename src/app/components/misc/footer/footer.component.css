@@ -30,13 +30,11 @@
 
 div {
     font-family: Orangejuice;
-
-
   }
 
 .container {
 font-size: 100px;
-padding-top: 200px;
+padding-top: 180px;
 padding-bottom: 200px;
 
 }
@@ -47,9 +45,7 @@ list-style: none;
 
 text {
   color: orange;
-
 }
-
 
 .maintext {
   font-family: sans-serif;
@@ -64,7 +60,6 @@ h3{
   margin-top: 15px;
   color: rgb(83, 88, 98);
   font-size: 45px;
-
 }
 
 .maintext-text h2{
@@ -80,12 +75,12 @@ font-size: 70px;
 font-weight: lighter;
 color: orange;
 }
+
 .maintext p {
   font-family: sans-serif;
   color: orange;
 
 }
-
 
 .maintext article {
   font-family: sans-serif;
