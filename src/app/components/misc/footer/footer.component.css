@@ -3,7 +3,7 @@
 .title {
       text-align: center;
       font-size: 100px;
-      margin-top: 15px;
+      margin-top: 20px;
       color: #336699;
 }
 .title p {
@@ -36,7 +36,7 @@ div {
 
 .container {
 font-size: 100px;
-padding-top: 180px;
+padding-top: 200px;
 padding-bottom: 200px;
 
 }
@@ -63,7 +63,7 @@ h3{
   font-family: Orangejuice;
   margin-top: 15px;
   color: rgb(83, 88, 98);
-  font-size: 50px;
+  font-size: 45px;
 
 }
 
