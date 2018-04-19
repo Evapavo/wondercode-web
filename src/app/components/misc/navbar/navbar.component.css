@@ -1,5 +1,5 @@
 nav {
-  background-color: violet;
+  background-color: orange;
   color: rgba(255,255,255,0.8);
   height: 35px;
   padding-bottom: 50px;
@@ -11,6 +11,10 @@ padding-bottom: 50px;
 
 .text {
   font-size: 25px;
-  
 
+}
+
+@font-face {
+    font-family: Orangejuice;
+    src: url(https://www.dafont.com/orange-juice.font);
 }

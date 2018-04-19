@@ -26,7 +26,7 @@ export class SourcesService extends BaseApiService {
   }
 
   create(source: Source): Observable<Source> {
-    return this.http.post(SourcesService.SOURCES_API, source.asFormData(), new RequestOptions({ withCredentials: true }))
+    return this.http.post(SourcesService.SOURCES_API, source, new RequestOptions({ withCredentials: true }))
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }

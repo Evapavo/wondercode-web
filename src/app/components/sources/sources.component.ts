@@ -10,7 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class SourcesComponent implements OnInit {
   sources: Array<Source> = [];
-  type: string;
+  type: string = "FILMS, BOOKS, FIGURES, MENTORS, QUOTES";
 
   constructor(
     private sourcesService: SourcesService,

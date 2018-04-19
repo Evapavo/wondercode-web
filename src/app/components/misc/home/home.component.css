@@ -1,13 +1,32 @@
 body {
-  font-family: "Open sans", "Opensans",sans-serif;
+  font-family: "Orange juice";
   font-weight: lighter;
-  font-size: 100px;
+  font-size: 2000px;
   margin: 0px;
   padding: 0px;
 }
+
+a {
+    text-align: center;
+}
+p {
+  color: rgb(230, 0, 92);
+  font-size: 50px;
+  text-align: center;
+
+}
+@font-face {
+    font-family: Orangejuice;
+    src: url(https://www.dafont.com/orange-juice.font);
+}
+
+div {
+    font-family: Orangejuice;
+  }
+
 .container {
-font-size: 50px;
-padding-top: 200px;
+font-size: 100px;
+padding-top: 45px;
 padding-bottom: 200px;
 
 }

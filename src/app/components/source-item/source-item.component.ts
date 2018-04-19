@@ -34,22 +34,20 @@ export class SourceItemComponent implements OnInit {
       }
     });
   }
+  
   onSubmitSource(sourceForm) {
-     const imageFile = this.imageFile.nativeElement;
-     if (imageFile.files && imageFile.files[0]) {
-       this.source.image = imageFile.files[0];
-       this.sourcesService.create(this.source)
-         .subscribe(
-           (source) => {
-             sourceForm.reset();
-             this.router.navigate(['/sources']);
-           },
-           (error) => {
-             this.apiError = error;
-           }
-       );
-     }
-   }
+     this.sourcesService.create(this.source)
+       .subscribe(
+         (source) => {
+           sourceForm.reset();
+           this.router.navigate(['/sources']);
+         },
+         (error) => {
+           this.apiError = error;
+         }
+     );
+  }
+
   onClickDelete() {
     if (window.confirm('Are you sure?')) {
       this.sourcesService.delete(this.source.id)

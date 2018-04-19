@@ -4,10 +4,10 @@
   <i class="fa fa-plus"></i>
 </a>
 <div class="row">
-  <div *ngFor="let source of sources" class="source col-xs-12 col-sm-3">
+  <div *ngFor="let source of sources" class="source col-xs-12 col-sm-4">
     <img [src]="source.image" />
-    <h3> {{ source.name }} </h3>
-    <p> {{ source.sourceType }} </p>
-    <button (click)="getSourceInfo(source.id)"> Read more </button>
+    <h3 class="text" style="color:#336699"> {{ source.name }} </h3>
+    <p class="text" style="color:pink"> {{ source.text }} </p>
+    <button (click)="getSourceInfo(source.id)"> NEW </button>
   </div>
 </div>

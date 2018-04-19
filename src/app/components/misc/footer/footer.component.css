@@ -1,24 +1,91 @@
 
 
-.whatcan {
+.title {
+      text-align: center;
+      font-size: 100px;
+      margin-top: 25px;
+      color: #336699;
+}
+.title p {
+  color: orange;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
   text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+@font-face {
+    font-family: Orangejuice;
+    src: url(https://www.dafont.com/orange-juice.font);
+
 }
 
-.what-text h2{
-  margin-top: 70px;
+@font-face {
+    font-family: Doctor-soos;
+    src: url(https://www.dafont.com/doctor-soos.font);
+
+}
+
+div {
+    font-family: Orangejuice;
+
+
+  }
+
+.container {
+font-size: 100px;
+padding-top: 180px;
+padding-bottom: 200px;
+
+}
+
+ul {
+list-style: none;
+}
+
+text {
+  color: orange;
+}
+
+
+.maintext {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom:10px;
+}
+
+span {
+  font-family: sans-serif;
+}
+
+h3{
+  font-family: Orangejuice;
+  margin-top: 15px;
   color: rgb(83, 88, 98);
+  font-size: 50px;
+
 }
 
-.whatcan p {
-  color: rgb(135, 145, 156);
+.maintext-text h2{
+  font-family: sans-serif;
+  margin-top: 50px;
+  color: orange;
+  font-weight: bold;
 }
 
-.whatcan a {
-  text-decoration: none;
-  color:red;
+.maintext p {
+  font-family: sans-serif;
+  color: orange;
+
+  font-weight: bold;
 }
 
-.whatcan article {
+
+.maintext article {
+  font-family: sans-serif;
   display: inline-block;
   vertical-align: middle;
   width: 200px;

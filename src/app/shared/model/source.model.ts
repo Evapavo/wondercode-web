@@ -4,6 +4,7 @@ export class Source {
     name: string;
     sourceType: string;
     image?: string;
+    text: string;
 
 
     public asFormData(): FormData {
@@ -12,6 +13,7 @@ export class Source {
         data.append('name', this.name);
         data.append('sourceType', this.sourceType);
         data.append('image', this.image);
+        data.append('text', this.text)
 
         return data;
     }
