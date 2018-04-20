@@ -5,7 +5,7 @@
 
   <div class="source-info">
     <h2> {{ source.name }}</h2>
-    <h3> {{ source.description }} </h3>
+    <h3> {{ source.text }} </h3>
 
     <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
   </div>
@@ -57,7 +57,7 @@
           <span class="input-group-addon">
             <i class="fa fa-tag"></i>
           </span>
-          <input name="description" type="description" description="description" class="form-control" placeholder="Description" [(ngModel)]="source.description" #text="ngModel" required>
+          <input name="description" type="description" #description class="form-control" placeholder="Description" [(ngModel)]="source.description" required>
         </div>
       </div>
 

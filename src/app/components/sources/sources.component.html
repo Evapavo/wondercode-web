@@ -7,7 +7,7 @@
   <div *ngFor="let source of sources" class="source col-xs-12 col-sm-4">
     <img [src]="source.image" />
     <h3 class="text" style="color:#336699"> {{ source.name }} </h3>
-    <p class="text" style="color:pink"> {{ source.text }} </p>
+    <p class="text" style="color:orange"> {{ source.text }} </p>
     <button (click)="getSourceInfo(source.id)"> NEW </button>
   </div>
 </div>
