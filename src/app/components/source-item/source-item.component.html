@@ -1,16 +1,27 @@
-<div *ngIf="source">
-  <div class="source-thumbnail">
-    <img width ="300px" [src]="source.image" />
-  </div>
 
-  <div class="source-info">
-    <h2> {{ source.name }}</h2>
-    <h3> {{ source.text }} </h3>
-    <h4> {{ source.description }} </h4>
+<div class= "container">
+  <div class= "row">
+    <div *ngIf="source">
+      <div class="source-thumbnail">
+      </div>
 
-    <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
-  </div>
-</div>
+      <div class="row" style="display: flex">
+
+
+        <div class="col-2">
+          <img width ="300px" [src]="source.image" />
+        </div>
+
+        <div class="col-10" style="padding: 0 0 0 100px">
+          <div class="source-info">
+              <h2> {{ source.name }}</h2>
+              <h3> {{ source.text }} </h3>
+              <h4> {{ source.description }} </h4>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
+    </div>
 
 <div class="row">
   <div class="col-xs-12 col-xs-5 col-sm-offset-0">
@@ -74,4 +85,6 @@
       </div>
     </form>
   </div>
+</div>
+</div>
 </div>
