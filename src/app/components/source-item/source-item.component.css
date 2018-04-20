@@ -1,13 +1,27 @@
 img {
   margin-bottom:40px;
-  width: 300px;
+  width: 200px;
 }
 
-text {
-  color: blue;
-}
 
 .row {
 margin-top: 20px;
 margin-bottom: 60px;
+}
+
+
+h2{
+  color: #336699;
+}
+
+h3 {
+ color: orange;
+}
+
+
+h4{
+margin-top: 30px;
+margin-bottom: 40px;
+text-align: justify;
+color: #336699;
 }
